@@ -32,7 +32,7 @@ with open(tfe(args == [], "app.fk", ' '.join(args))) as f:
      start = newline.find("(") + 1
      end = newline.find(")")
      print(newline[start:end])
-   if (line.startsWith("wait(")):
+   if (line.startswith("wait(")):
       # Wait for anything
       newline = line
       newline = newline.replace("\\n", "\n")
