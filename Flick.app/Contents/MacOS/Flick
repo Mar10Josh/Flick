@@ -1,7 +1,0 @@
-#!/bin/sh
-
-fixvars () {
-runner=$(cd "$(dirname "$0")"; pwd)
-}
-fixvars
-python3 main.py "$RUNNER$@" 
