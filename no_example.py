@@ -2,6 +2,9 @@
 #GUI is not supported.
 
 import sys
+import time
+import yachalk
+
 
 args = sys.argv
 
@@ -12,6 +15,8 @@ def tfe(test, yes, no):
      return yes
    else:
      return no
+
+packages = ['flick']
 
 if not args == []:
  with open(' '.join(args)) as f:
@@ -48,6 +53,16 @@ if not args == []:
              input(args[1])
             else:
              print(newline + " does not have " + tfe(args[0] == "enter", "2","3") + " args! Usage: wait(enter/seconds, prompt(enter)/seconds(seconds),prompt(seconds))")
-           
+      if (newline.startswith("dofor")):
+        # TODO: MAKE FUNCTIONS
+        print(yachalk.yellow("MustDo Warning:\n\nDoFor is not done, so you cannot use DoFor."))
+      if (newline.startswith("get ") and newline.split(' ')[0] == "get"):
+        args = newline.split(" ")
+        args.remove(0)
+        for i in args:
+          if (not i == "rlse"):
+            packages.append(i)
+          if (packages[len(packages)-1] == "rlse"): #RLSE means Release
+            print(i + "was added")     
 
 
