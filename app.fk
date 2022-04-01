@@ -1,1 +1,2 @@
 Text(This is a Text Object!\nThat was a new line! Use \\\escape|spacen to do it!)
+dofor hi()
